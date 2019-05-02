@@ -56,6 +56,9 @@ class LevelPane extends Panel  {
         }
         public void actionPerformed(ActionEvent event){
             level.resize(level.getSizeX()+changeX,level.getSizeY()+changeY);
+            canvas.setPreferredSize(new Dimension(
+                Level.CELL_SIZE*level.getSizeX(),Level.CELL_SIZE*level.getSizeY()));
+            scroll.doLayout();
             canvas.repaint();
         }
     }
@@ -75,6 +78,8 @@ class LevelPane extends Panel  {
         canvas = new LevelCanvas();
         // Add action listener
         canvas.addMouseListener(new LevelMouseListener());
+        canvas.setPreferredSize(new Dimension(
+            Level.CELL_SIZE*level.getSizeX(),Level.CELL_SIZE*level.getSizeY()));
         scroll.add(canvas);
 
         // Add the top panel

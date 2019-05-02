@@ -1,2 +1,2 @@
-Main-Class: "leveled.LevelEditor"
+Main-Class: leveled.LevelEditor
 

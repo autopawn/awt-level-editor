@@ -55,10 +55,8 @@ class LevelPane extends Panel  {
             this.changeY = changeY;
         }
         public void actionPerformed(ActionEvent event){
-            if(level.getSizeX()+changeX>0 && level.getSizeY()+changeY>0){
-                level.resize(level.getSizeX()+changeX,level.getSizeY()+changeY);
-                canvas.repaint();
-            }
+            level.resize(level.getSizeX()+changeX,level.getSizeY()+changeY);
+            canvas.repaint();
         }
     }
 
